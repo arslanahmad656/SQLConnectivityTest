@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQL_Connectivity_Test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="SQL Connectivity Test" Height="450" Width="800"
+        ResizeMode="CanMinimize" Icon="main.png">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1.5*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -21,7 +22,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2">
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource Header}">
             SQL Connectivity Test
         </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0">
