@@ -48,7 +48,7 @@
         </TextBlock>
         <TextBox x:Name="Txt_DbPassword" Grid.Row="5" Grid.Column="1"></TextBox>
 
-        <Button x:Name="Btn_TestConnectivity" Grid.Row="6" Grid.Column="1">
+        <Button x:Name="Btn_TestConnectivity" Grid.Row="6" Grid.Column="1" Click="Btn_TestConnectivity_Click">
             Test Connectivity
         </Button>
     </Grid>
