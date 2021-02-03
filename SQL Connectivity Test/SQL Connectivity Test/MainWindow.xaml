@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:SQL_Connectivity_Test"
         mc:Ignorable="d"
         Title="SQL Connectivity Test" Height="450" Width="800"
-        ResizeMode="CanMinimize" Icon="main.png">
-    <Grid>
+        ResizeMode="CanMinimize" Icon="main.png"
+        Loaded="Window_Loaded"
+        KeyUp="Window_KeyUp">
+    <Grid Margin="5 0">
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height="*"/>
@@ -28,28 +30,37 @@
         <TextBlock Grid.Row="1" Grid.Column="0">
             SQL Server Name
         </TextBlock>
-        <TextBox x:Name="Txt_DbInstance" Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox x:Name="Txt_DbInstance" Grid.Row="1" Grid.Column="1" TabIndex="1"></TextBox>
 
-        <CheckBox x:Name="Chk_WindowsAuthentication" Grid.Row="3" Grid.Column="1">
+        <CheckBox x:Name="Chk_WindowsAuthentication" Grid.Row="3" Grid.Column="1" Checked="Chk_WindowsAuthentication_Toggle" Unchecked="Chk_WindowsAuthentication_Toggle" TabIndex="3">
             Use Windows Authentication
         </CheckBox>
 
         <TextBlock Grid.Row="2" Grid.Column="0">
             Database Name
         </TextBlock>
-        <TextBox x:Name="Txt_DbName" Grid.Row="2" Grid.Column="1"></TextBox>
+        <TextBox x:Name="Txt_DbName" Grid.Row="2" Grid.Column="1" TabIndex="2"></TextBox>
 
         <TextBlock Grid.Row="4" Grid.Column="0">
             SQL Username
         </TextBlock>
-        <TextBox x:Name="Txt_DbUsername" Grid.Row="4" Grid.Column="1"></TextBox>
+        <TextBox x:Name="Txt_DbUsername" Grid.Row="4" Grid.Column="1" TabIndex="5"></TextBox>
 
         <TextBlock Grid.Row="5" Grid.Column="0">
             SQL Password
         </TextBlock>
-        <TextBox x:Name="Txt_DbPassword" Grid.Row="5" Grid.Column="1"></TextBox>
+        <Grid Grid.Row="5" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <PasswordBox x:Name="Txt_DbPassword" Grid.Row="0" Grid.Column="0" TabIndex="6"></PasswordBox>
+            <Button x:Name="Btn_ViewPassword" Grid.Row="0" Grid.Column="1" TabIndex="7" HorizontalAlignment="Stretch" Click="Btn_ViewPassword_Click">
+                View
+            </Button>
+        </Grid>
 
-        <Button x:Name="Btn_TestConnectivity" Grid.Row="6" Grid.Column="1" Click="Btn_TestConnectivity_Click">
+        <Button x:Name="Btn_TestConnectivity" Grid.Row="6" Grid.Column="1" Click="Btn_TestConnectivity_Click" TabIndex="8">
             Test Connectivity
         </Button>
     </Grid>

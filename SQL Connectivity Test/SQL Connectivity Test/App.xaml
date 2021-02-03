@@ -11,7 +11,12 @@
             <Setter Property="Margin" Value="10 5"/>
             <Setter Property="Padding" Value="10 5"/>
         </Style>
-        
+
+        <Style TargetType="PasswordBox">
+            <Setter Property="Margin" Value="10 5"/>
+            <Setter Property="Padding" Value="10 5"/>
+        </Style>
+
         <Style TargetType="CheckBox">
             <Setter Property="Margin" Value="10 5"/>
             <Setter Property="Padding" Value="10 5"/>
