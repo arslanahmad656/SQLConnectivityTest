@@ -7,6 +7,49 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2">
+            SQL Connectivity Test
+        </TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0">
+            SQL Server Name
+        </TextBlock>
+        <TextBox x:Name="Txt_DbInstance" Grid.Row="1" Grid.Column="1"></TextBox>
+
+        <CheckBox x:Name="Chk_WindowsAuthentication" Grid.Row="3" Grid.Column="1">
+            Use Windows Authentication
+        </CheckBox>
+
+        <TextBlock Grid.Row="2" Grid.Column="0">
+            Database Name
+        </TextBlock>
+        <TextBox x:Name="Txt_DbName" Grid.Row="2" Grid.Column="1"></TextBox>
+
+        <TextBlock Grid.Row="4" Grid.Column="0">
+            SQL Username
+        </TextBlock>
+        <TextBox x:Name="Txt_DbUsername" Grid.Row="4" Grid.Column="1"></TextBox>
+
+        <TextBlock Grid.Row="5" Grid.Column="0">
+            SQL Password
+        </TextBlock>
+        <TextBox x:Name="Txt_DbPassword" Grid.Row="5" Grid.Column="1"></TextBox>
+
+        <Button x:Name="Btn_TestConnectivity" Grid.Row="6" Grid.Column="1">
+            Test Connectivity
+        </Button>
     </Grid>
 </Window>
